@@ -12,6 +12,9 @@ func main() {
 
 	println(firstName, lastName)
 	println(firstName2, lastName2)
+
+	total:= sumAll(10,10,10)
+	println(total)
 }
 
 // non parameter
@@ -40,4 +43,14 @@ func getFullName2() (firstName string, lastName string) {
 	lastName = "Stiven"
 
 	return
+}
+
+// Variadic function
+func sumAll(numbers ...int) int {
+	total := 0
+	for _, number := range numbers {
+		total += number
+	}
+
+	return total
 }
